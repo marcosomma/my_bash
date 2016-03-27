@@ -83,3 +83,16 @@ export PS1="$PROMPT_HOME$PROMPT_PATH\$(parse_git_branch)$PROMPT_NEW_LINE$PROMPT_
 #### The Font
 
  It's based on the [Awesome-Terminal-Fonts](https://github.com/gabrielelana/awesome-terminal-fonts) by [@gabrielelana](https://github.com/gabrielelana)
+
+---
+### Change Log
+
+#### HEAD
+
+##### 1.0 (27 - 03 - 2016)
+
+ * Initial release.
+
+##### feature...
+
+ * added sshKeyShow alias >> show your ssh public key
