@@ -1,3 +1,4 @@
+#!/bin/bash
 # DOCKER
 alias buildDocker='docker build .'
 alias runDocker='docker run -d'

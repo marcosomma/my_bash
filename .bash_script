@@ -1,4 +1,4 @@
-
+#!/bin/bash
 git-blame() {
   ruby ~/scripts/git-blame-colored $1 | less -R
 }

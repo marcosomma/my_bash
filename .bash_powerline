@@ -1,3 +1,4 @@
+#!/bin/bash
 parse_git_branch() {
     if [ -d .git ]; then
         printf '\033[0m \033[38;5;32m' && git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
