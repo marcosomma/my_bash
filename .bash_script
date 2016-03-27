@@ -1,0 +1,8 @@
+
+git-blame() {
+  ruby ~/scripts/git-blame-colored $1 | less -R
+}
+
+git-initialize() {
+  ~/scripts/git-initializer $1
+}
