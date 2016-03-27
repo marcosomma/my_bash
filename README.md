@@ -41,6 +41,7 @@ alias workspace='documents && cd workspace && ls -l'
 alias personal='documents && cd personal && ls -l'
 
 # UselfullCommand
+alias sshKeyShow='cat ~/.ssh/id_rsa.pub'
 alias lsd='ls -ald */'
 alias lsh='ls -ald * .*'
 alias gpm='git pull --rebase && npm install && npm test && git push origin master'
