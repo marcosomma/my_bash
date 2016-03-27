@@ -77,5 +77,8 @@ export PROMPT_PS='$ \[\033[38;5;15m\]'
 export PROMPT_NEW_LINE='\n'
 
 export PS1="$PROMPT_HOME$PROMPT_PATH\$(parse_git_branch)$PROMPT_NEW_LINE$PROMPT_FEEDBACK$PROMPT_PS"
- 
+
 ```
+#### The Font
+
+ It's based on the [Awesome-Terminal-Fonts](https://github.com/gabrielelana/awesome-terminal-fonts) by [@gabrielelana](https://github.com/gabrielelana)
