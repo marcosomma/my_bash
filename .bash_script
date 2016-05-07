@@ -1,8 +1,25 @@
 #!/bin/bash
+
+### GIT SCRIPTS
 git-blame() {
-  ruby ~/scripts/git-blame-colored $1 | less -R
+  ruby ~/.scripts/git-blame-colored $1 | less -R
 }
 
 git-initialize() {
-  ~/scripts/git-initializer $1
+  ~/.scripts/git-initializer $1
+}
+
+### GITHUB API SCRIPTS
+git-repos-list(){
+  clear && curl -s https://api.github.com/users/$1/repos
+}
+
+gitRepos(){
+  if [ -z "$1" ]; then
+    echo "No arguments provided! please add username"
+  elif [ -z "$2" ]; then
+    clear && git-repos-list $1 | grep -E --color '"name":' | awk  '{gsub(",","",$2); gsub(/"/,"",$2); print "\033[0;36mREPO_NAME: \033[1;33m" $2}'
+  else
+    clear && git-repos-list $1 | grep -E  --color '"name":|"ssh_url":' | grep -E  --color "$2"| awk  '{gsub(",","",$2); gsub(/"/,"",$2); if ($1 == "\"name\":") print "\033[0;36mNAME: \033[1;33m" $2; else print "\033[0;32mSSH_URL: \033[1;37m" $2"\n\033[1;36m---------------------------------------------------------------------------------------------";}'
+  fi
 }
